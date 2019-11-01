@@ -1,31 +1,22 @@
 #!/usr/bin/env bash
 # This script will display numbers 1-20
-# Custom messages will appear after 4th,9th,& 17th iterations
+# Specific messages after #'s 4,9,17
 
+num_count=1
 bad_china='bad luck from China'
 bad_japan='bad luck from Japan'
 bad_italy='bad luck from Italy'
-string_count=1
 
-while [ $string_count -le 20 ]
+while [ $num_count -le 20 ]
 do
-    if [ $string_count -eq 4 ]
-    then
-        echo "$string_count"
-        echo "$bad_china"
-        ((string_count++))
-    elif [ $string_count -eq 9 ]
-    then
-        echo "$string_count"
-        echo "$bad_japan"
-        ((string_count++))
-    elif [ $string_count -eq 17 ]
-    then
-        echo "$string_count"
-        echo "$bad_italy"
-        ((string_count++))
-    else    
-        echo "$string_count"
-        ((string_count++))
-    fi     
+    echo "$num_count"
+    case "$num_count" in 
+    4) echo "$bad_china"
+        ;;
+    9) echo "$bad_japan"
+        ;;
+    17) echo "$bad_italy"
+        ;;
+    esac
+    ((num_count++))
 done
