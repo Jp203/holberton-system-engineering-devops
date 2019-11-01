@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#  This script will display "Holberton School" 10 times
+#  After the 9th iteration "Hi" will be printed
+
+string_count=1
+string_1='Holberton School'
+string_2='Hi'
+
+while [ $string_count -le 10 ]
+do
+    echo "$string_1"
+    ((string_count++))
+    if [ $string_count -eq 10 ]
+    then
+        echo $string_2
+    fi
+done
