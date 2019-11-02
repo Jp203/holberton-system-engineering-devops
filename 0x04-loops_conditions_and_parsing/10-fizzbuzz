@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# This script will display #'s 1-100
+# Custom messages for multiples of 3 & 5
+# Multiple of 3 - Fizz
+# Multiple of 5 - Buzz
+# Multiple of both - FizzBuzz
+
+mod_3='Fizz'
+mod_5='Buzz'
+mod_35='FizzBuzz'
+
+for i in {1..100}
+do
+    if [ $((i % 3)) == 0 ] && [ $((i % 5)) == 0 ]
+    then
+        echo "$mod_35"
+    elif [ $((i % 3)) == 0 ]
+    then
+        echo "$mod_3"
+    elif [ $((i % 5)) == 0 ]
+    then
+        echo "$mod_5"
+    else
+        echo "$i"
+    fi
+done       
