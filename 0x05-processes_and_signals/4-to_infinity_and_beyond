@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Displays a message indefinitely
+
+buzz="To infinity and beyond"
+
+while true; do
+        echo "$buzz"
+        sleep 2
+done
+
