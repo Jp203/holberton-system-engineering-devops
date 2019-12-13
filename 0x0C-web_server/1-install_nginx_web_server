@@ -6,5 +6,5 @@ sudo mkdir -p /var/www/html/
 sudo service nginx restart
 # config for index.html
 echo 'Holberton School for the win!' > temp_config.html
-sudo cp temp_config.html /var/www/html/idex.html
+sudo cp temp_config.html /var/www/html/index.html
 rm temp_config.html
