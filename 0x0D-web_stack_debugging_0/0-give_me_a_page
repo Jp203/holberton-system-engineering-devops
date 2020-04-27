@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# This script runs Apache and returns a page
-
-sudo apt-get -y update
-sudo apt-get -y install apache2
-sudo service apache2 start
-sed -i 's/.*ServerName.*/\tServerName localhost/' /etc/apache2/apache2.conf
